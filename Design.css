@@ -15,6 +15,7 @@ body {
   min-width: 900px;
 }
 
+/* PAGE STRUCTURE */
 .page {
   position: relative;
   padding: 60px;
@@ -36,6 +37,12 @@ body {
   height: 50px;
 }
 
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue3);
+}
+
 .menu {
   display: flex;
   gap: 15px;
@@ -48,16 +55,19 @@ body {
   font-weight: 600;
   cursor: pointer;
   color: #0b1220;
-}
-
-.menu button.active {
-  color: white;
-  background: var(--blue2);
-  border-radius: 5px;
+  font-size: 0.95rem;
   padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-/* SEARCH */
+.menu button.active,
+.menu button:hover {
+  background: var(--blue2);
+  color: white;
+}
+
+/* SEARCH BAR */
 .search-wrap {
   margin-left: auto;
 }
@@ -78,7 +88,7 @@ body {
   width: 200px;
 }
 
-/* CLUBS GRID */
+/* CLUB GRID */
 .clubs-grid {
   display: flex;
   flex-wrap: wrap;
@@ -98,18 +108,29 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  background: var(--blue3);
+  background: var(--blue1);
   margin: 0 auto 10px;
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.club .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 .club .avatar:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.45); /* subtle blue glow */
 }
 
-/* TITLES */
+/* SECTION HEADERS */
 .hero-title {
   font-size: 2.2rem;
   text-align: center;
@@ -122,9 +143,10 @@ body {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  color: #222;
 }
 
-/* SECTIONS */
+/* TRANSITIONS */
 html {
   scroll-behavior: smooth;
 }
@@ -136,6 +158,7 @@ html {
   transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s linear 0.6s;
   display: none;
   padding-bottom: 100px;
+  position: relative;
 }
 
 .section.active {
@@ -145,7 +168,26 @@ html {
   display: block;
 }
 
-/* ✅ FIXED GMAIL ICON + TOOLTIP */
+/* CLUB PAGE LOGO (top-right corner) */
+.club-page-logo {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  box-shadow: 0 0 10px rgba(44, 143, 224, 0);
+}
+
+.section.active .club-page-logo {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.35); /* subtle glow */
+}
+
+/* GMAIL ICON + TOOLTIP */
 .gmail-tooltip {
   position: fixed;
   bottom: 25px;
