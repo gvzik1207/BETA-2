@@ -15,7 +15,7 @@ body {
   min-width: 900px;
 }
 
-/* PAGE STRUCTURE */
+/* PAGE */
 .page {
   position: relative;
   padding: 60px 80px;
@@ -68,7 +68,7 @@ body {
   color: white;
 }
 
-/* SEARCH BAR */
+/* SEARCH */
 .search-wrap {
   margin-left: auto;
 }
@@ -89,7 +89,7 @@ body {
   width: 200px;
 }
 
-/* CLUBS GRID */
+/* CLUB GRID */
 .clubs-grid {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +127,7 @@ body {
   box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
 }
 
-/* SECTION HEADERS */
+/* HEADERS */
 .hero-title {
   font-size: 2.2rem;
   text-align: center;
@@ -142,17 +142,7 @@ body {
   color: #444;
 }
 
-/* RULES + PROGRAMS LINE */
-h3 {
-  color: var(--blue2);
-  font-weight: 700;
-  margin: 35px auto 20px auto;
-  text-align: center;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-/* PARAGRAPHS / CONTENT */
+/* CONTENT */
 .lead {
   font-size: 1.1rem;
   text-align: center;
@@ -166,7 +156,16 @@ h3 {
   max-width: 1100px;
 }
 
-/* SECTION ANIMATION */
+.section-heading strong {
+  display: block;
+  margin-top: 40px; /* larger gap before Rules */
+  margin-bottom: 15px;
+  color: var(--blue3);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* SECTIONS */
 .section {
   display: none;
   opacity: 0;
@@ -228,7 +227,7 @@ h3 {
   transform: scale(1.1);
 }
 
-/* RESPONSIVENESS */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .lead, .lead.wide {
     max-width: 90%;
@@ -237,7 +236,7 @@ h3 {
   .hero-title {
     font-size: 1.8rem;
   }
-  h3 {
-    font-size: 1rem;
+  .section-heading strong {
+    margin-top: 30px;
   }
 }
