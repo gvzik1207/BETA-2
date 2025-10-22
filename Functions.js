@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ Back Button Functionality
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
