@@ -25,12 +25,12 @@ body {
   box-sizing: border-box;
 }
 
-/* NAVIGATION */
+/* NAV */
 .topnav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -69,25 +69,16 @@ body {
 }
 
 /* SEARCH */
-.search-wrap {
-  margin-left: auto;
-}
-
+.search-wrap { margin-left: auto; }
 .search {
   display: flex;
   align-items: center;
   background: white;
   border-radius: 8px;
   padding: 6px 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
-.search input {
-  border: none;
-  outline: none;
-  font-weight: 500;
-  width: 200px;
-}
+.search input { border: none; outline: none; font-weight: 500; width: 200px; }
 
 /* CLUB GRID */
 .clubs-grid {
@@ -124,10 +115,10 @@ body {
 
 .club .avatar:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
+  box-shadow: 0 0 15px rgba(44,143,224,0.45);
 }
 
-/* HEADERS */
+/* TITLES */
 .hero-title {
   font-size: 2.2rem;
   text-align: center;
@@ -140,6 +131,16 @@ body {
   font-size: 1rem;
   margin-bottom: 15px;
   color: #444;
+}
+
+/* SECTION-HEADING (Rules/Programs) */
+.section-heading strong {
+  display: block;
+  margin-top: 38px; /* slightly larger gap before Rules */
+  margin-bottom: 12px;
+  color: var(--blue3);
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
 /* CONTENT */
@@ -156,22 +157,30 @@ body {
   max-width: 1100px;
 }
 
-.section-heading strong {
-  display: block;
-  margin-top: 40px; /* larger gap before Rules */
-  margin-bottom: 15px;
-  color: var(--blue3);
-  font-weight: 700;
-  font-size: 1.15rem;
+/* BACK BUTTON */
+.back-wrap {
+  margin-top: 28px;
+  text-align: center;
 }
+.back-btn {
+  background: var(--blue2);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(44,143,224,0.18); }
 
-/* SECTIONS */
+/* SECTION STYLES */
 .section {
   display: none;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity .6s ease, transform .6s ease;
   padding: 80px 0 120px;
   position: relative;
   text-align: center;
@@ -184,7 +193,7 @@ body {
   transform: translateY(0);
 }
 
-/* CLUB PAGE LOGO */
+/* CLUB LOGO */
 .club-page-logo {
   position: absolute;
   top: 25px;
@@ -194,49 +203,36 @@ body {
   border-radius: 50%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity .6s ease;
 }
-
 .section.active .club-page-logo {
   opacity: 1;
-  box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
+  box-shadow: 0 0 15px rgba(44,143,224,0.35);
 }
 
-/* GMAIL ICON */
+/* GMAIL TOOLTIP */
 .gmail-tooltip {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
-
 .gmail-tooltip img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   border: 2px solid var(--blue2);
   background: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform .3s;
 }
-
-.gmail-tooltip:hover img {
-  transform: scale(1.1);
-}
+.gmail-tooltip:hover img { transform: scale(1.1); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .lead, .lead.wide {
-    max-width: 90%;
-    font-size: 1rem;
-  }
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  .section-heading strong {
-    margin-top: 30px;
-  }
+  .lead, .lead.wide { max-width: 90%; font-size: 1rem; }
+  .hero-title { font-size: 1.8rem; }
+  .section-heading strong { margin-top: 30px; }
+  .club { width: 140px; }
+  .club .avatar { width: 100px; height: 100px; }
+  .club-page-logo { width: 64px; height: 64px; right: 20px; top: 20px; }
 }
