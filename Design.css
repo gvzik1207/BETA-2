@@ -6,27 +6,22 @@
   --blue3: #0d6fbf;
 }
 
-/* GENERAL BODY STYLES */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background: white;
   overflow-x: hidden;
-  overflow-y: auto;
   min-width: 900px;
 }
 
-/* PAGE CONTAINER */
 .page {
   position: relative;
   padding: 60px 80px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  box-sizing: border-box;
 }
 
-/* NAVIGATION BAR */
 .topnav {
   display: flex;
   align-items: center;
@@ -69,7 +64,6 @@ body {
   color: white;
 }
 
-/* SEARCH BAR */
 .search-wrap {
   margin-left: auto;
 }
@@ -90,7 +84,6 @@ body {
   width: 200px;
 }
 
-/* CLUBS GRID PAGE */
 .clubs-grid {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +121,6 @@ body {
   box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
 }
 
-/* PAGE TITLES */
 .hero-title {
   font-size: 2.2rem;
   text-align: center;
@@ -143,7 +135,6 @@ body {
   color: #444;
 }
 
-/* CLUB CONTENT */
 .lead {
   font-size: 1.1rem;
   text-align: center;
@@ -153,23 +144,6 @@ body {
   line-height: 1.8;
 }
 
-.lead.wide {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* RULES & PROGRAMS SECTION HEADERS */
-.section-heading strong {
-  display: block;
-  margin-top: 40px; /* Slightly larger gap before "Rules" */
-  margin-bottom: 15px; /* Moderate gap before "Programs" */
-  color: var(--blue3);
-  font-weight: 700;
-  font-size: 1.15rem;
-}
-
-/* INDIVIDUAL CLUB SECTIONS */
 .section {
   display: none;
   opacity: 0;
@@ -177,7 +151,6 @@ body {
   transform: translateY(10px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   padding: 80px 0 120px;
-  position: relative;
   text-align: center;
 }
 
@@ -188,7 +161,6 @@ body {
   transform: translateY(0);
 }
 
-/* CLUB PAGE LOGO */
 .club-page-logo {
   position: absolute;
   top: 25px;
@@ -206,7 +178,6 @@ body {
   box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
 }
 
-/* BACK BUTTON */
 .back-btn {
   margin-top: 40px;
   background-color: var(--blue2);
@@ -225,7 +196,6 @@ body {
   transform: scale(1.05);
 }
 
-/* GMAIL FLOATING ICON */
 .gmail-tooltip {
   position: fixed;
   bottom: 25px;
@@ -250,17 +220,13 @@ body {
   transform: scale(1.1);
 }
 
-/* RESPONSIVENESS */
 @media (max-width: 900px) {
-  .lead, .lead.wide {
+  .lead {
     max-width: 90%;
     font-size: 1rem;
   }
   .hero-title {
     font-size: 1.8rem;
-  }
-  .section-heading strong {
-    margin-top: 30px;
   }
   .club-page-logo {
     position: static;
