@@ -3,143 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Archive</title>
+  <title>Club Archive | BTTHS</title>
   <link rel="stylesheet" href="Design.css">
 </head>
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- NAVIGATION -->
-  <div class="topnav">
-    <div class="logo">
-      <img src="images/triangle.png" alt="Triangle Logo">
-      <span class="brand">ClubArchive.com</span>
+    <!-- NAVIGATION BAR -->
+    <div class="topnav">
+      <div class="logo">
+        <img src="images/triangle.png" alt="Triangle Logo">
+        <span class="brand">ClubArchive.com</span>
+      </div>
+      <nav class="menu">
+        <button data-page="home" class="active">Home</button>
+        <button data-page="about">About</button>
+        <button data-page="clubs">Clubs</button>
+        <button data-page="faqs">FAQs</button>
+      </nav>
+      <div class="search-wrap">
+        <form id="searchForm" class="search">
+          <input id="searchInput" type="text" placeholder="Search a club...">
+        </form>
+      </div>
     </div>
-    <nav class="menu">
-      <button data-page="home" class="active">Home</button>
-      <button data-page="about">About</button>
-      <button data-page="clubs">Clubs</button>
-      <button data-page="faqs">FAQs</button>
-    </nav>
-    <div class="search-wrap">
-      <form id="searchForm" class="search">
-        <input id="searchInput" type="text" placeholder="Search a club...">
-      </form>
-    </div>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="section active">
+      <h2 class="hero-title">Welcome to Club Archive</h2>
+      <p class="lead">Explore every club in Bacolod Tay Tung High School. Find your passion, join, and make memories!</p>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <h2 class="hero-title">About Club Archive</h2>
+      <p class="lead">Club Archive is a student-made website showcasing every club at Bacolod Tay Tung High School. Created by Grade 10 Programming students, it promotes creativity, teamwork, and leadership through technology.</p>
+    </section>
+
+    <!-- CLUBS GRID SECTION -->
+    <section id="clubs" class="section">
+      <h2 class="hero-title">All Clubs</h2>
+      <div class="clubs-grid">
+        <div class="club" data-page="aikido"><div class="avatar"><img src="images/aikido.png" alt=""></div><h3>Aikido Club</h3></div>
+        <div class="club" data-page="armonia"><div class="avatar"><img src="images/armonia.png" alt=""></div><h3>Armonia</h3></div>
+        <div class="club" data-page="booklovers"><div class="avatar"><img src="images/booklovers.png" alt=""></div><h3>Book Lovers</h3></div>
+        <div class="club" data-page="chef"><div class="avatar"><img src="images/chef.png" alt=""></div><h3>CHEFS</h3></div>
+        <div class="club" data-page="clarion"><div class="avatar"><img src="images/clarion.png" alt=""></div><h3>Clarion</h3></div>
+        <div class="club" data-page="curiousmind"><div class="avatar"><img src="images/curiousmind.png" alt=""></div><h3>Curious Mind Society</h3></div>
+        <div class="club" data-page="dancesynergy"><div class="avatar"><img src="images/dancesynergy.png" alt=""></div><h3>Dance Synergy</h3></div>
+        <div class="club" data-page="eureka"><div class="avatar"><img src="images/eureka.png" alt=""></div><h3>Eureka!</h3></div>
+        <div class="club" data-page="researchhive"><div class="avatar"><img src="images/researchhive.png" alt=""></div><h3>Research Hive</h3></div>
+        <div class="club" data-page="scobuddies"><div class="avatar"><img src="images/scobuddies.png" alt=""></div><h3>SCO Buddies</h3></div>
+        <div class="club" data-page="serviam"><div class="avatar"><img src="images/serviam.png" alt=""></div><h3>Serviam</h3></div>
+        <div class="club" data-page="taytungvoices"><div class="avatar"><img src="images/taytungvoices.png" alt=""></div><h3>Tay Tung Voices</h3></div>
+        <div class="club" data-page="theatre"><div class="avatar"><img src="images/theatre.png" alt=""></div><h3>Theatre</h3></div>
+        <div class="club" data-page="youngdesigners"><div class="avatar"><img src="images/youngdesigners.png" alt=""></div><h3>Young Designers</h3></div>
+      </div>
+    </section>
+
+    <!-- INDIVIDUAL CLUB PAGES -->
+    <!-- Example with details (Aikido Club) -->
+    <section id="aikido" class="section">
+      <img src="images/aikido.png" class="club-page-logo" alt="">
+      <h2 class="hero-title">合氣道 (Aikido Club)</h2>
+      <p class="adviser"><em>Club Adviser – Gelkoff A. Calmerin</em></p>
+      <div class="lead wide">
+        <p>The Tay Tung Aikido Club is a martial arts club inspired by the philosophy of Harmony. Aikido directly translates as The Way of Harmony.</p>
+        <p class="section-heading"><strong>Rules</strong></p>
+        <p>Attend all scheduled training unless with a valid excuse.<br>Always observe proper hygiene.<br>Always clean and take care of Dojo and equipment.<br>Respect the Sensei and classmates.<br>Extend discipline beyond the dojo.</p>
+        <p class="section-heading"><strong>Programs</strong></p>
+        <p>Keiko (basic training), Zazen (meditation), Ukemi (breakfall), Randori (freestyle), Ken-Jo Suburi (sword and staff training).</p>
+      </div>
+      <button class="back-btn">← Back to Clubs Page</button>
+    </section>
+
+    <!-- Placeholder for other clubs -->
+    <section id="armonia" class="section"><h2 class="hero-title">Armonia</h2><p class="adviser"><em>Club Adviser – Harold Christian G. Montoya</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="booklovers" class="section"><h2 class="hero-title">Book Lovers</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="chef" class="section"><h2 class="hero-title">CHEFS Club</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="clarion" class="section"><h2 class="hero-title">Clarion</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="curiousmind" class="section"><h2 class="hero-title">Curious Mind Society</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="dancesynergy" class="section"><h2 class="hero-title">Dance Synergy</h2><p class="adviser"><em>Club Adviser – Mina Retita-Uhlmann</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="eureka" class="section"><h2 class="hero-title">Eureka!</h2><p class="adviser"><em>Club Adviser – Mr. Christian Castro</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="researchhive" class="section"><h2 class="hero-title">Research Hive</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="scobuddies" class="section"><h2 class="hero-title">SCO Buddies</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="serviam" class="section"><h2 class="hero-title">BTTHS Serviam Club</h2><p class="adviser"><em>Club Adviser – Danny Israel G. Saloria</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="taytungvoices" class="section"><h2 class="hero-title">Tay Tung Voices</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="theatre" class="section"><h2 class="hero-title">Theatre</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+    <section id="youngdesigners" class="section"><h2 class="hero-title">Young Designers Club</h2><p class="adviser"><em>Club Adviser – Mina Retita-Uhlmann</em></p><div class="lead wide"><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
+
   </div>
 
-  <!-- HOME -->
-  <section id="home" class="section active">
-    <h2 class="hero-title">Welcome to Club Archive</h2>
-    <p class="lead">Explore every club in Bacolod Tay Tung High School. Find your passion, join, and make memories!</p>
-  </section>
+  <div class="gmail-tooltip">
+    <img src="images/gmail.png" alt="Gmail Icon">
+  </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2 class="hero-title">About Club Archive</h2>
-    <p class="lead">Club Archive is a student-made portal showcasing every club at Bacolod Tay Tung High School. Created by Grade 10 Programming students, it promotes creativity, teamwork, and leadership through technology.</p>
-  </section>
-
-  <!-- CLUBS GRID -->
-  <section id="clubs" class="section">
-    <h2 class="hero-title">All Clubs</h2>
-    <div class="clubs-grid">
-      <div class="club" data-page="aikido"><div class="avatar"><img src="images/aikido.png" alt=""></div><h3>Aikido Club</h3></div>
-      <div class="club" data-page="armonia"><div class="avatar"><img src="images/armonia.png" alt=""></div><h3>Armonia</h3></div>
-      <div class="club" data-page="booklovers"><div class="avatar"><img src="images/booklovers.png" alt=""></div><h3>Book Lovers</h3></div>
-      <div class="club" data-page="chef"><div class="avatar"><img src="images/chef.png" alt=""></div><h3>CHEFS</h3></div>
-      <div class="club" data-page="clarion"><div class="avatar"><img src="images/clarion.png" alt=""></div><h3>Clarion</h3></div>
-      <div class="club" data-page="curiousmind"><div class="avatar"><img src="images/curiousmind.png" alt=""></div><h3>Curious Mind Society</h3></div>
-      <div class="club" data-page="dancesynergy"><div class="avatar"><img src="images/dancesynergy.png" alt=""></div><h3>Dance Synergy</h3></div>
-      <div class="club" data-page="eureka"><div class="avatar"><img src="images/eureka.png" alt=""></div><h3>Eureka!</h3></div>
-      <div class="club" data-page="researchhive"><div class="avatar"><img src="images/researchhive.png" alt=""></div><h3>Research Hive</h3></div>
-      <div class="club" data-page="scobuddies"><div class="avatar"><img src="images/scobuddies.png" alt=""></div><h3>SCO Buddies</h3></div>
-      <div class="club" data-page="serviam"><div class="avatar"><img src="images/serviam.png" alt=""></div><h3>Serviam</h3></div>
-      <div class="club" data-page="taytungvoices"><div class="avatar"><img src="images/taytungvoices.png" alt=""></div><h3>Tay Tung Voices</h3></div>
-      <div class="club" data-page="theatre"><div class="avatar"><img src="images/theatre.png" alt=""></div><h3>Theatre</h3></div>
-      <div class="club" data-page="youngdesigners"><div class="avatar"><img src="images/youngdesigners.png" alt=""></div><h3>Young Designers</h3></div>
-    </div>
-  </section>
-
-  <!-- INDIVIDUAL CLUB SECTIONS (Detailed + Placeholders) -->
-  <!-- Aikido -->
-  <section id="aikido" class="section">
-    <img src="images/aikido.png" class="club-page-logo" alt="">
-    <h2 class="hero-title">合氣道 (Aikido Club)</h2>
-    <p class="adviser"><em>Club Adviser – Gelkoff A. Calmerin</em></p>
-    <div class="lead wide">
-      <p>The Tay Tung Aikido Club is a martial arts club inspired by the philosophy of Harmony. Aikido directly translates as The Way of Harmony.</p>
-      <p class="section-heading"><strong>Rules</strong></p>
-      <p>Attend all scheduled training unless with a valid excuse.<br>Always observe proper hygiene.<br>Always clean and take care of Dojo and equipment.<br>Respect the Sensei and classmates.<br>Extend discipline beyond the dojo.</p>
-      <p class="section-heading"><strong>Programs</strong></p>
-      <p>Keiko (basic training), Zazen (meditation), Ukemi (breakfall), Randori (freestyle), Ken-Jo Suburi (sword and staff training).</p>
-    </div>
-    <button class="back-btn">← Back to Clubs Page</button>
-  </section>
-
-  <!-- Armonia -->
-  <section id="armonia" class="section">
-    <img src="images/armonia.png" class="club-page-logo" alt="">
-    <h2 class="hero-title">Armonia Music Club</h2>
-    <p class="adviser"><em>Club Adviser – Harold Christian G. Montoya</em></p>
-    <div class="lead wide">
-      <p>The Armonia Music Club provides student musicians a space to explore and enhance their musical talents.</p>
-      <p class="section-heading"><strong>Rules</strong></p>
-      <p>Attend all rehearsals and activities.<br>Maintain instruments.<br>Respect peers and mentors.<br>Be punctual and responsible.</p>
-      <p class="section-heading"><strong>Programs</strong></p>
-      <p>Music Creation, Rehearsals, Performances, Collaborations, and Workshops.</p>
-    </div>
-    <button class="back-btn">← Back to Clubs Page</button>
-  </section>
-
-  <!-- Book Lovers -->
-  <section id="booklovers" class="section">
-    <img src="images/booklovers.png" class="club-page-logo" alt="">
-    <h2 class="hero-title">Book Lovers Club</h2>
-    <p class="adviser"><em>Club Advisers – Mrs. Mary Jane M. Zarceno, Mrs. Yulita Q. Suarez</em></p>
-    <div class="lead wide">
-      <p>A club for readers and creatives who love discussing books and making crafts.</p>
-      <p class="section-heading"><strong>Rules</strong></p>
-      <p>Be respectful.<br>Handle books with care.<br>Come prepared.<br>Participate fully.</p>
-      <p class="section-heading"><strong>Programs</strong></p>
-      <p>Read-Aloud Sessions, Book Talks, Crafts, Story Retelling, Puppet Shows.</p>
-    </div>
-    <button class="back-btn">← Back to Clubs Page</button>
-  </section>
-
-  <!-- CHEFS -->
-  <section id="chef" class="section">
-    <img src="images/chef.png" class="club-page-logo" alt="">
-    <h2 class="hero-title">CHEFS (Creative Hands Exploring Foods and Sweets)</h2>
-    <p class="adviser"><em>Club Advisers – Mrs. Angela D. Dumay, LPT; Ms. Ma. Catherine B. Llanto, LPT</em></p>
-    <div class="lead wide">
-      <p>The CHEFS Club lets young learners explore baking while learning creativity and patience.</p>
-      <p class="section-heading"><strong>Rules</strong></p>
-      <p>Attend all sessions.<br>Maintain cleanliness.<br>Respect others.<br>Follow safety rules.</p>
-      <p class="section-heading"><strong>Programs</strong></p>
-      <p>Baking Sessions, Sweet Treats Day, Bake-offs, Guest Demos, Holiday Baking.</p>
-    </div>
-    <button class="back-btn">← Back to Clubs Page</button>
-  </section>
-
-  <!-- Placeholder Clubs (Clarion, etc.) -->
-  <section id="clarion" class="section"><img src="images/clarion.png" class="club-page-logo" alt=""><h2 class="hero-title">Clarion</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="curiousmind" class="section"><img src="images/curiousmind.png" class="club-page-logo" alt=""><h2 class="hero-title">Curious Mind Society</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="researchhive" class="section"><img src="images/researchhive.png" class="club-page-logo" alt=""><h2 class="hero-title">Research Hive</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="scobuddies" class="section"><img src="images/scobuddies.png" class="club-page-logo" alt=""><h2 class="hero-title">SCO Buddies</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="serviam" class="section"><img src="images/serviam.png" class="club-page-logo" alt=""><h2 class="hero-title">BTTHS Serviam Club</h2><p class="adviser"><em>Club Adviser – Danny Israel G. Saloria</em></p><div class="lead wide"><p>The BTTHS Serviam Club promotes volunteerism, leadership, and compassion.</p><p class="section-heading"><strong>Rules</strong></p><p>Participate actively, be on time, uphold respect and unity.</p><p class="section-heading"><strong>Programs</strong></p><p>Serviam Encounter, Project Yuhom, Community Immersion.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="taytungvoices" class="section"><img src="images/taytungvoices.png" class="club-page-logo" alt=""><h2 class="hero-title">Tay Tung Voices</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="theatre" class="section"><img src="images/theatre.png" class="club-page-logo" alt=""><h2 class="hero-title">Theatre Club</h2><p class="adviser"><em>Club Adviser – To be announced</em></p><div class="lead wide"><p class="section-heading"><strong>Rules</strong></p><p>Details to be added soon.</p><p class="section-heading"><strong>Programs</strong></p><p>Details to be added soon.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="youngdesigners" class="section"><img src="images/youngdesigners.png" class="club-page-logo" alt=""><h2 class="hero-title">Young Designers Club</h2><p class="adviser"><em>Club Adviser – Mina Retita-Uhlmann</em></p><div class="lead wide"><p>The Young Designers Club is a creative space for students who love design and innovation.</p><p class="section-heading"><strong>Rules</strong></p><p>Commitment and teamwork required. Follow BTTHS rules.</p><p class="section-heading"><strong>Programs</strong></p><p>Design Sprints, Workshops, Community Projects, and Design Week Exhibitions.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="dancesynergy" class="section"><img src="images/dancesynergy.png" class="club-page-logo" alt=""><h2 class="hero-title">Dance Synergy</h2><p class="adviser"><em>Club Adviser – Mina Retita-Uhlmann</em></p><div class="lead wide"><p>The Dance Synergy Club welcomes dancers of all styles to perform and express themselves.</p><p class="section-heading"><strong>Rules</strong></p><p>Attend practices. Respect others. Follow instructions. Wear proper attire.</p><p class="section-heading"><strong>Programs</strong></p><p>Dance Workshops, Fitness Sessions, and Performances.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-  <section id="eureka" class="section"><img src="images/eureka.png" class="club-page-logo" alt=""><h2 class="hero-title">Eureka!</h2><p class="adviser"><em>Club Adviser – Mr. Christian Castro</em></p><div class="lead wide"><p>The Eureka Science Club promotes curiosity and love for science through experiments, awareness, and outreach.</p><p class="section-heading"><strong>Rules</strong></p><p>Respect everyone, participate actively, and be responsible.</p><p class="section-heading"><strong>Programs</strong></p><p>Mangrove Planting, Coastal Cleanup, Educational Trips, and Science Seminars.</p></div><button class="back-btn">← Back to Clubs Page</button></section>
-
-</div>
-
-<div class="gmail-tooltip">
-  <img src="images/gmail.png" alt="Gmail Icon">
-</div>
-
-<script src="Functions.js"></script>
+  <script src="Functions.js"></script>
 </body>
 </html>
