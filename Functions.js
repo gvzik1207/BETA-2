@@ -66,4 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
       searchForm.dispatchEvent(new Event("submit"));
     }
   });
+
+  // 🟦 Back-to-Clubs button support
+  document.querySelectorAll(".back-button").forEach(button => {
+    button.addEventListener("click", () => {
+      showSection("clubs");
+    });
+  });
 });
