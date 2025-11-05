@@ -5,13 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
 
+  // --- SECTION SWITCHING ---
   function showSection(id) {
     sections.forEach(section => {
       section.classList.toggle("active", section.id === id);
     });
+
     buttons.forEach(btn =>
       btn.classList.toggle("active", btn.dataset.page === id)
     );
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     club.addEventListener("click", () => showSection(club.dataset.page))
   );
 
+  // --- SEARCH FUNCTION ---
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -36,15 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- BACK BUTTON HANDLER ---
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
       showSection("clubs");
     }
   });
-});
 
   // --- CLUB CAROUSEL FUNCTIONALITY ---
+  const track = document.querySelector(".carousel-track");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
   if (track && prevBtn && nextBtn) {
     const cards = document.querySelectorAll(".club-card");
     let index = 0;
@@ -64,10 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
       moveCarousel();
     });
 
-    // Resize handler for responsiveness
     window.addEventListener("resize", moveCarousel);
 
-    // Optional: auto-slide every 5 seconds
+    // Optional auto-slide
     setInterval(() => {
       index = (index + 1) % cards.length;
       moveCarousel();
@@ -77,4 +84,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- INITIAL LOAD ---
   showSection("home");
 });
-
