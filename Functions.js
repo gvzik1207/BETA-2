@@ -5,16 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
 
-  // --- SECTION SWITCHING ---
   function showSection(id) {
     sections.forEach(section => {
       section.classList.toggle("active", section.id === id);
     });
-
     buttons.forEach(btn =>
       btn.classList.toggle("active", btn.dataset.page === id)
     );
-
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     club.addEventListener("click", () => showSection(club.dataset.page))
   );
 
-  // --- SEARCH FUNCTION ---
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -40,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- BACK BUTTON HANDLER ---
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
@@ -84,3 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- INITIAL LOAD ---
   showSection("home");
 });
+
