@@ -48,7 +48,7 @@ body {
 .archive {
   font-size: 4rem;
   font-weight: 800;
-  color: #2c8fe0;
+  color: #0d6fbf;
   margin: 0;
   line-height: 1.1;
 }
@@ -422,6 +422,7 @@ body {
     margin: 0 auto 20px;
   }
 }
+
 
 
 
