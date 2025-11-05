@@ -22,59 +22,56 @@ body {
   min-height: 100vh;
 }
 
-/* ===== HOME SECTION ===== */
-#home {
+.home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 80vh;
-  background-color: #ffffff;
-  text-align: left;
-  padding-left: 80px;
-}
-
-.home-container {
-  max-width: 700px;
-}
-
-.welcome-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #000000;
-  letter-spacing: 1px;
-  margin-bottom: 0.2em;
+  align-items: flex-start;
+  padding: 120px 80px;
+  background-color: #fff;
+  min-height: 80vh;
 }
 
 .site-title {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #007bff;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--blue2);
   margin: 0;
-}
-
-.site-title span {
-  color: #1d68d1;
+  line-height: 1.1;
 }
 
 .tagline {
-  font-size: 1.25rem;
-  color: #333333;
-  margin-top: 0.5em;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #111;
+  margin-top: 0.8rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.section.active {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
   #home {
-    padding: 60px 30px;
-    text-align: center;
+    padding: 100px 60px;
   }
-
   .site-title {
-    font-size: 2.3rem;
+    font-size: 3rem;
   }
+}
 
+@media (max-width: 768px) {
+  .home {
+    padding: 80px 40px;
+  }
+  .site-title {
+    font-size: 2.2rem;
+  }
   .tagline {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -412,6 +409,7 @@ body {
     margin: 0 auto 20px;
   }
 }
+
 
 
 
