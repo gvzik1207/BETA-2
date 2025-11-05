@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- CLUB CAROUSEL FUNCTIONALITY ---
+  // --- CLUB CAROUSEL FUNCTIONALITY (LOOP ENABLED) ---
   const track = document.querySelector(".carousel-track");
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
@@ -57,20 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(-${index * cardWidth}px)`;
   }
 
-  if (nextBtn && prevBtn && track) {
+  if (track && nextBtn && prevBtn) {
+    const totalCards = document.querySelectorAll(".club-card").length;
+
     nextBtn.addEventListener("click", () => {
-      const totalCards = document.querySelectorAll(".club-card").length;
-      if (index < totalCards - 1) {
-        index++;
-        moveCarousel();
-      }
+      index = (index + 1) % totalCards; // loops forward
+      moveCarousel();
     });
 
     prevBtn.addEventListener("click", () => {
-      if (index > 0) {
-        index--;
-        moveCarousel();
-      }
+      index = (index - 1 + totalCards) % totalCards; // loops backward
+      moveCarousel();
     });
 
     window.addEventListener("resize", moveCarousel);
