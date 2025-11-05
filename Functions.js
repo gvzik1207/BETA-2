@@ -4,17 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const clubs = document.querySelectorAll(".club");
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
-  const track = document.querySelector(".carousel-track");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
 
-  // --- SECTION SWITCHING ---
   function showSection(id) {
-    if (!id) return;
     sections.forEach(section => {
-      const isActive = section.id === id;
-      section.classList.toggle("active", isActive);
-      section.style.display = isActive ? "block" : "none";
+      section.classList.toggle("active", section.id === id);
     });
     buttons.forEach(btn =>
       btn.classList.toggle("active", btn.dataset.page === id)
@@ -22,41 +15,34 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => showSection(btn.dataset.page));
-  });
+  buttons.forEach(btn =>
+    btn.addEventListener("click", () => showSection(btn.dataset.page))
+  );
 
-  clubs.forEach(club => {
-    club.addEventListener("click", () => showSection(club.dataset.page));
-  });
+  clubs.forEach(club =>
+    club.addEventListener("click", () => showSection(club.dataset.page))
+  );
 
-  // --- SEARCH FUNCTION ---
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
       const query = searchInput.value.trim().toLowerCase();
       if (!query) return;
-
-      const found = Array.from(sections).find(section =>
-        section.id.toLowerCase().includes(query)
+      const found = Array.from(sections).find(sec =>
+        sec.id.toLowerCase().includes(query)
       );
-
-      if (found) {
-        showSection(found.id);
-      } else {
-        alert("No matching club or section found.");
-      }
+      if (found) showSection(found.id);
       searchInput.value = "";
     });
   }
 
-  // --- BACK BUTTON HANDLER ---
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
       showSection("clubs");
     }
   });
+});
 
   // --- CLUB CAROUSEL FUNCTIONALITY ---
   if (track && prevBtn && nextBtn) {
@@ -91,3 +77,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- INITIAL LOAD ---
   showSection("home");
 });
+
