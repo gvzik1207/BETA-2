@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
 }
 
-.home {
+#home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .home {
+  #home {
     padding: 100px 60px;
   }
   .site-title {
@@ -417,6 +417,7 @@ body {
     margin: 0 auto 20px;
   }
 }
+
 
 
 
