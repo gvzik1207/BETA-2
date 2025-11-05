@@ -28,14 +28,14 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 120px 80px 40px 80px;
+  padding: 120px 80px 40px 80px; /* space from topnav */
   background: linear-gradient(180deg, #e7f3ff 0%, #ffffff 100%);
 }
 
 .home-container {
   text-align: left;
   max-width: 700px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* spacing between text and carousel */
 }
 
 .welcome {
@@ -64,7 +64,7 @@ body {
 .carousel-container {
   width: 100%;
   max-width: 1000px;
-  margin: 0; 
+  margin: 0; /* remove excessive gap */
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ body {
   position: relative;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  margin-top: 20px; /* small gap below text */
 }
 
 .carousel-track {
@@ -124,438 +124,108 @@ body {
 }
 
 .prev { left: 15px; }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+.next { right: 15px; }
 
-:root {
---blue1: #77b9f0;
---blue2: #2c8fe0;
---blue3: #0d6fbf;
+@media (min-width: 768px) {
+  .club-card { min-width: 50%; }
 }
 
-body {
-font-family: 'Poppins', sans-serif;
-margin: 0;
-background: white;
-overflow-x: hidden;
-min-width: 900px;
+@media (min-width: 1024px) {
+  .club-card { min-width: 33.33%; }
 }
 
-.page {
-position: relative;
-padding: 60px 80px;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-}
-
-#home {
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-padding: 100px 80px 40px 80px;
-background: linear-gradient(180deg, #e7f3ff 0%, #ffffff 100%);
-min-height: auto;
-}
-
-.home-container {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-max-width: 700px;
-margin-top: 40px;
-}
-
-.home-container h2,
-.home-container h1,
-.home-container p {
-margin: 0;
-padding: 0;
-width: 100%;
-text-align: left;
-}
-
-.welcome {
-font-size: 1.6rem;
-font-weight: 800;
-color: var(--blue2);
-letter-spacing: 1px;
-margin-bottom: 8px;
-}
-
-.archive {
-font-size: 3.8rem;
-font-weight: 800;
-color: var(--blue3);
-line-height: 1.05;
-margin-bottom: 12px;
-}
-
-.subtitle {
-font-size: 1.15rem;
-font-weight: 400;
-color: var(--blue2);
-}
-
-@media (max-width: 1024px) {
-#home {
-padding: 80px 60px 30px 60px;
-}
-.home-container {
-margin-top: 30px;
-}
-.archive {
-font-size: 3rem;
-}
-}
-
-@media (max-width: 768px) {
-#home {
-padding: 70px 30px 20px 30px;
-}
-.home-container {
-margin-top: 20px;
-}
-.welcome {
-font-size: 1.4rem;
-}
-.archive {
-font-size: 2.4rem;
-}
-.subtitle {
-font-size: 1rem;
-}
-}
-
+/* TOP NAVIGATION */
 .topnav {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .logo img {
-width: 50px;
-height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .brand {
-font-weight: 700;
-font-size: 1.1rem;
-color: var(--blue3);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue3);
 }
 
 .menu {
-display: flex;
-gap: 15px;
-margin-left: 30px;
+  display: flex;
+  gap: 15px;
+  margin-left: 30px;
 }
 
 .menu button {
-background: none;
-border: none;
-font-weight: 600;
-cursor: pointer;
-color: #0b1220;
-font-size: 0.95rem;
-padding: 5px 10px;
-border-radius: 6px;
-transition: 0.3s;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1220;
+  font-size: 0.95rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .menu button.active,
 .menu button:hover {
-background: var(--blue2);
-color: white;
+  background: var(--blue2);
+  color: white;
 }
 
-.carousel-container {
-width: 90%;
-max-width: 1000px;
-margin: 60px auto;
-text-align: center;
-}
-
-.carousel-container h3 {
-font-size: 1.8rem;
-color: #007bff;
-margin-bottom: 20px;
-}
-
-.carousel {
-display: flex;
-overflow: hidden;
-position: relative;
-border-radius: 20px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.carousel-track {
-display: flex;
-transition: transform 0.5s ease-in-out;
-}
-
-.club-card {
-min-width: 100%;
-padding: 40px;
-background: #f8f9fa;
-}
-
-.club-card img {
-width: 150px;
-height: 150px;
-object-fit: cover;
-border-radius: 100%;
-margin-bottom: 15px;
-}
-
-.club-card h4 {
-color: #000;
-margin: 10px 0;
-}
-
-.club-card p {
-color: #555;
-}
-
-.carousel-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background: #007bff;
-border: none;
-color: white;
-font-size: 1.5rem;
-padding: 10px 15px;
-border-radius: 50%;
-cursor: pointer;
-}
-
-.carousel-btn:hover {
-background: #0056b3;
-}
-
-.prev { left: 15px; }
-.next { right: 15px; }
-
-@media (min-width: 768px) {
-.club-card { min-width: 50%; }
-}
-
-@media (min-width: 1024px) {
-.club-card { min-width: 33.33%; }
-}
-
-.about-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-gap: 50px;
-padding: 40px 10%;
-}
-
-.about-left, .about-right {
-flex: 1 1 45%;
-min-width: 300px;
-}
-
-.about-title {
-font-size: 1.8rem;
-font-weight: 800;
-color: black;
-margin-bottom: 0.5rem;
-}
-
-.about-subtitle {
-font-size: 2.5rem;
-font-weight: 800;
-color: #1E73BE;
-margin-top: 0;
-margin-bottom: 1rem;
-}
-
-.about-left p, .about-right p {
-font-size: 1rem;
-line-height: 1.8;
-text-align: justify;
-color: #222;
-}
-
-@media (max-width: 800px) {
-.about-container {
-flex-direction: column;
-text-align: left;
-gap: 30px;
-}
-}
-
+/* SEARCH */
 .search-wrap {
-margin-left: auto;
+  margin-left: auto;
 }
 
 .search {
-display: flex;
-align-items: center;
-background: white;
-border-radius: 8px;
-padding: 6px 12px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .search input {
-border: none;
-outline: none;
-font-weight: 500;
-width: 200px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 200px;
 }
 
-.clubs-grid {
-display: flex;
-flex-wrap: wrap;
-gap: 24px;
-margin-top: 20px;
-margin-bottom: 100px;
-justify-content: center;
+@media (max-width: 1024px) {
+  #home {
+    padding: 100px 60px 30px 60px;
+  }
+  .archive {
+    font-size: 3.2rem;
+  }
 }
 
-.club {
-width: 180px;
-text-align: center;
-cursor: pointer;
-}
-
-.club .avatar {
-width: 120px;
-height: 120px;
-border-radius: 50%;
-background: var(--blue1);
-margin: 0 auto 10px;
-overflow: hidden;
-transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.club .avatar img {
-width: 100%;
-height: 100%;
-border-radius: 50%;
-object-fit: cover;
-}
-
-.club .avatar:hover {
-transform: scale(1.05);
-box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
-}
-
-.hero-title {
-font-size: 2.2rem;
-text-align: center;
-margin-bottom: 10px;
-color: var(--blue3);
-}
-
-.adviser {
-text-align: center;
-font-size: 1rem;
-margin-bottom: 15px;
-color: #444;
-}
-
-.lead {
-font-size: 1.1rem;
-text-align: center;
-max-width: 1000px;
-margin: 0 auto 30px;
-color: #222;
-line-height: 1.8;
-}
-
-.section {
-display: none;
-opacity: 0;
-visibility: hidden;
-transform: translateY(10px);
-transition: opacity 0.6s ease, transform 0.6s ease;
-padding: 80px 0 120px;
-text-align: center;
-}
-
-.section.active {
-display: block;
-opacity: 1;
-visibility: visible;
-transform: translateY(0);
-}
-
-.club-page-logo {
-position: absolute;
-top: 25px;
-right: 35px;
-width: 80px;
-height: 80px;
-border-radius: 50%;
-object-fit: cover;
-opacity: 0;
-transition: opacity 0.6s ease;
-}
-
-.section.active .club-page-logo {
-opacity: 1;
-box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
-}
-
-.back-btn {
-margin-top: 40px;
-background-color: var(--blue2);
-color: white;
-border: none;
-padding: 12px 22px;
-border-radius: 12px;
-cursor: pointer;
-font-weight: 600;
-font-size: 1rem;
-transition: background 0.3s, transform 0.2s;
-}
-
-.back-btn:hover {
-background-color: var(--blue3);
-transform: scale(1.05);
-}
-
-.gmail-tooltip {
-position: fixed;
-bottom: 25px;
-right: 25px;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-}
-
-.gmail-tooltip img {
-width: 55px;
-height: 55px;
-border-radius: 50%;
-border: 2px solid var(--blue2);
-background: white;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-transition: transform 0.3s;
-}
-
-.gmail-tooltip:hover img {
-transform: scale(1.1);
-}
-
-@media (max-width: 900px) {
-.lead {
-max-width: 90%;
-font-size: 1rem;
-}
-.hero-title {
-font-size: 1.8rem;
-}
-.club-page-logo {
-position: static;
-display: block;
-margin: 0 auto 20px;
-}
+@media (max-width: 768px) {
+  #home {
+    padding: 90px 30px 20px 30px;
+  }
+  .welcome {
+    font-size: 1.4rem;
+  }
+  .archive {
+    font-size: 2.6rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
 }
