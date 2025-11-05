@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
 
+  // --- SECTION SWITCHING ---
   function showSection(id) {
     sections.forEach(section => {
       section.classList.toggle("active", section.id === id);
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     club.addEventListener("click", () => showSection(club.dataset.page))
   );
 
+  // --- SEARCH FUNCTION ---
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -36,10 +38,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- BACK BUTTON HANDLER ---
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
       showSection("clubs");
     }
   });
+
+  // --- CLUB CAROUSEL FUNCTIONALITY ---
+  const track = document.querySelector(".carousel-track");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  let index = 0;
+
+  function moveCarousel() {
+    const cardWidth = document.querySelector(".club-card")?.offsetWidth || 0;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  if (nextBtn && prevBtn && track) {
+    nextBtn.addEventListener("click", () => {
+      const totalCards = document.querySelectorAll(".club-card").length;
+      if (index < totalCards - 1) {
+        index++;
+        moveCarousel();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (index > 0) {
+        index--;
+        moveCarousel();
+      }
+    });
+
+    window.addEventListener("resize", moveCarousel);
+  }
 });
