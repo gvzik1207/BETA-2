@@ -28,14 +28,14 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 120px 80px 40px 80px; /* space from topnav */
+  padding: 120px 80px 40px 80px; 
   background: linear-gradient(180deg, #e7f3ff 0%, #ffffff 100%);
 }
 
 .home-container {
   text-align: left;
   max-width: 700px;
-  margin-bottom: 40px; /* spacing between text and carousel */
+  margin-bottom: 40px;
 }
 
 .welcome {
@@ -64,7 +64,7 @@ body {
 .carousel-container {
   width: 100%;
   max-width: 1000px;
-  margin: 0; /* remove excessive gap */
+  margin: 0; 
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ body {
   position: relative;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 20px; /* small gap below text */
+  margin-top: 20px; 
 }
 
 .carousel-track {
@@ -229,3 +229,4 @@ body {
     font-size: 1rem;
   }
 }
+
