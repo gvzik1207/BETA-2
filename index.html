@@ -8,88 +8,84 @@
 </head>
 <body>
   <div class="page">
-	  
-    <!-- NAVIGATION -->
-    <div class="topnav">
-      <div class="logo">
-        <img src="images/triangle.png" alt="Triangle Logo">
-        <span class="brand">ClubArchive.com</span>
+
+  <!-- NAVIGATION -->
+  <div class="topnav">
+    <div class="logo">
+      <img src="images/triangle.png" alt="Triangle Logo">
+      <span class="brand">ClubArchive.com</span>
+    </div>
+    <nav class="menu">
+      <button data-page="home" class="active">Home</button>
+      <button data-page="about">About</button>
+      <button data-page="clubs">Clubs</button>
+      <button data-page="faqs">FAQs</button>
+    </nav>
+    <div class="search-wrap">
+      <form id="searchForm" class="search">
+        <input id="searchInput" type="text" placeholder="Search a club...">
+      </form>
+    </div>
+  </div>
+
+  <!-- HOME -->
+  <section id="home" class="section active">
+    <div class="home-container">
+      <h2 class="welcome">WELCOME TO</h2>
+      <h1 class="archive">CLUB ARCHIVE</h1>
+      <p class="subtitle">A collection ready to be explored!</p>
+    </div>
+
+    <!-- CLUBS GALLERY CAROUSEL -->
+    <div class="carousel-container">
+      <h3>Featured Clubs</h3>
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          <div class="club-card">
+            <img src="https://via.placeholder.com/150" alt="Art Club">
+            <h4>Art Club</h4>
+            <p>Express your creativity through painting and design.</p>
+          </div>
+          <div class="club-card">
+            <img src="https://via.placeholder.com/150" alt="Science Club">
+            <h4>Science Club</h4>
+            <p>Explore experiments and innovation in science.</p>
+          </div>
+          <div class="club-card">
+            <img src="https://via.placeholder.com/150" alt="Music Club">
+            <h4>Music Club</h4>
+            <p>Where melodies meet passion and performance.</p>
+          </div>
+          <div class="club-card">
+            <img src="https://via.placeholder.com/150" alt="Sports Club">
+            <h4>Sports Club</h4>
+            <p>Building teamwork and endurance through games.</p>
+          </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
       </div>
-      <nav class="menu">
-        <button data-page="home" class="active">Home</button>
-        <button data-page="about">About</button>
-        <button data-page="clubs">Clubs</button>
-        <button data-page="faqs">FAQs</button>
-      </nav>
-      <div class="search-wrap">
-        <form id="searchForm" class="search">
-          <input id="searchInput" type="text" placeholder="Search a club...">
-        </form>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="about-container">
+      <div class="about-left">
+        <h2 class="about-title">ABOUT US</h2>
+        <h3 class="about-subtitle">CLUB ARCHIVE</h3>
+        <p>is a website specifically designed to aid students who struggle with navigating clubs found in Bacolod Tay Tung Highschool.</p>
+        <p>It aims to provide detailed information and help students locate their desired clubs with minimal to no trouble.</p>
+      </div>
+
+      <div class="about-right">
+        <h2 class="about-title">WHO ARE WE?</h2>
+        <h3 class="about-subtitle">THE DEVELOPERS</h3>
+        <p>We are a team of grade 10 programming students, learning how to create a website through coding with the use of the coding language “HTML” and “CSS” for our IPT.</p>
+        <p>We dedicate this website for those that are struggling with information about different clubs.</p>
       </div>
     </div>
-
-    <!-- HOME -->  
-    <section id="home" class="section active">  
-      <div class="home-container">  
-        <h2 class="welcome">WELCOME TO</h2>  
-        <h1 class="archive">CLUB ARCHIVE</h1>  
-        <p class="subtitle">A collection ready to be explored!</p>  
-      </div>  
-
-      <!-- CLUBS GALLERY CAROUSEL (Now inside Home) -->  
-      <div class="carousel-container">  
-        <h3>Featured Clubs</h3>  
-        <div class="carousel">  
-          <button class="carousel-btn prev">&#10094;</button>  
-          <div class="carousel-track">  
-            <div class="club-card">  
-              <img src="https://via.placeholder.com/150" alt="Art Club">  
-              <h4>Art Club</h4>  
-              <p>Express your creativity through painting and design.</p>  
-            </div>  
-            <div class="club-card">  
-              <img src="https://via.placeholder.com/150" alt="Science Club">  
-              <h4>Science Club</h4>  
-              <p>Explore experiments and innovation in science.</p>  
-            </div>  
-            <div class="club-card">  
-              <img src="https://via.placeholder.com/150" alt="Music Club">  
-              <h4>Music Club</h4>  
-              <p>Where melodies meet passion and performance.</p>  
-            </div>  
-            <div class="club-card">  
-              <img src="https://via.placeholder.com/150" alt="Sports Club">  
-              <h4>Sports Club</h4>  
-              <p>Building teamwork and endurance through games.</p>  
-            </div>  
-          </div>  
-          <button class="carousel-btn next">&#10095;</button>  
-        </div>  
-      </div>  
-    </section>  
-
-	<!-- ABOUT -->
-	<section id="about" class="section">
- 		<div class="about-container">
-
-    <!-- LEFT: ABOUT US -->
-    <div class="about-left">
-      <h2 class="about-title">ABOUT US</h2>
-      <h3 class="about-subtitle">CLUB ARCHIVE</h3>
-      <p>is a website specifically designed to aid students who struggle with navigating clubs found in Bacolod Tay Tung Highschool.</p>
-      <p>It aims to provide detailed information and help students locate their desired clubs with minimal to no trouble.</p>
-    </div>
-
-    <!-- RIGHT: THE DEVELOPERS -->
-    <div class="about-right">
-      <h2 class="about-title">WHO ARE WE?</h2>
-      <h3 class="about-subtitle">THE DEVELOPERS</h3>
-      <p>We are a team of grade 10 programming students, learning how to create a website through coding with the use of the coding language “HTML” and “CSS” for our IPT.</p>
-      <p>We dedicate this website for those that are struggling with information about different clubs.</p>
-    </div>
-
-    </div>
-	</section>
+  </section>
 	  
     <!-- CLUBS PAGE -->
     <section id="clubs" class="section">
@@ -283,3 +279,4 @@
   <script src="Functions.js"></script>
 </body>
 </html>
+
