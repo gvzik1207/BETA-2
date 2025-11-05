@@ -29,7 +29,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 120px 80px 40px 80px; 
-  background: linear-gradient(180deg, #e7f3ff 0%, #ffffff 100%);
+  background: white;
 }
 
 .home-container {
@@ -246,3 +246,4 @@ body {
     text-align: center;
   }
 }
+
