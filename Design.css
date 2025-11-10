@@ -18,7 +18,7 @@ body {
 /* PAGE WRAPPER */
 .page {
   position: relative;
-  padding: 0 80px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 120px 40px 40px;
+  padding: 80px 40px 20px;
   background: white;
 }
 
@@ -89,7 +89,7 @@ body {
 
 #home .club-card {
   min-width: 100%;
-  padding: 40px;
+  padding: 25px;
   background: #f8f9fa;
 }
 
@@ -144,8 +144,8 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px 80px;
+  gap: 10px;
+  padding: 10px 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -225,8 +225,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 50px;
-  padding: 20px 10%;
+  gap: 25px;
+  padding: 20px 8%;
 }
 
 .about-left, .about-right {
@@ -263,9 +263,9 @@ body {
 .clubs-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 18px;
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   justify-content: center;
 }
 
@@ -304,7 +304,7 @@ body {
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  padding: 80px 0 120px;
+  padding: 60px 0 80px;
   text-align: center;
 }
 
@@ -335,11 +335,11 @@ body {
 
 /* BUTTON */
 .back-btn {
-  margin-top: 40px;
+  margin-top: 25px;
   background-color: var(--blue2);
   color: white;
   border: none;
-  padding: 12px 22px;
+  padding: 8px 16px;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
@@ -355,8 +355,8 @@ body {
 /* GMAIL ICON */
 .gmail-tooltip {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 15px;
+  right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,10 +382,10 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 80px;
+  gap: 40px;
   flex-wrap: wrap;
   text-align: left;
-  padding: 30px 10%;
+  padding: 40px 8%;
 }
 
 .faq-section {
@@ -473,6 +473,7 @@ body {
   .subtitle { font-size: 1rem; }
   .faq-section h1 { font-size: 1.5rem; }
 }
+
 
 
 
