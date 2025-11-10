@@ -63,14 +63,14 @@ body {
 }
 
 /* CAROUSEL */
-.carousel-container {
+#home .carousel-container {
   width: 100%;
   max-width: 1000px;
   margin: 0;
   text-align: center;
 }
 
-.carousel {
+#home .carousel {
   display: flex;
   overflow: hidden;
   position: relative;
@@ -79,18 +79,18 @@ body {
   margin-top: 20px;
 }
 
-.carousel-track {
+#home .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.club-card {
+#home .club-card {
   min-width: 100%;
   padding: 40px;
   background: #f8f9fa;
 }
 
-.club-card img {
+#home .club-card img {
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -98,16 +98,16 @@ body {
   margin-bottom: 15px;
 }
 
-.club-card h4 {
+#home .club-card h4 {
   color: #000;
   margin: 10px 0;
 }
 
-.club-card p {
+#home .club-card p {
   color: #555;
 }
 
-.carousel-btn {
+#home .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -121,20 +121,22 @@ body {
   transition: 0.3s;
 }
 
-.carousel-btn:hover {
+#home .carousel-btn:hover {
   background: var(--blue3);
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+#home .prev { left: 15px; }
+#home .next { right: 15px; }
 
 @media (min-width: 768px) {
-  .club-card { min-width: 50%; }
+  #home .club-card { min-width: 50%; }
 }
 
 @media (min-width: 1024px) {
-  .club-card { min-width: 33.33%; }
+  #home .club-card { min-width: 33.33%; }
 }
+
+
 
 /* NAVIGATION */
 .topnav {
@@ -458,4 +460,5 @@ body {
   .subtitle { font-size: 1rem; }
   .faq-section h1 { font-size: 1.5rem; }
 }
+
 
