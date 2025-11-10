@@ -12,8 +12,10 @@ body {
   background: white;
   overflow-x: hidden;
   min-width: 900px;
+  color: #222;
 }
 
+/* PAGE WRAPPER */
 .page {
   position: relative;
   padding: 0 80px;
@@ -28,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 120px 80px 40px 80px; 
+  padding: 120px 80px 40px;
   background: white;
 }
 
@@ -60,11 +62,11 @@ body {
   color: var(--blue2);
 }
 
-/* CAROUSEL SECTION */
+/* CAROUSEL */
 .carousel-container {
   width: 100%;
   max-width: 1000px;
-  margin: 0; 
+  margin: 0;
   text-align: center;
 }
 
@@ -74,7 +76,7 @@ body {
   position: relative;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .carousel-track {
@@ -134,7 +136,7 @@ body {
   .club-card { min-width: 33.33%; }
 }
 
-/* TOP NAVIGATION */
+/* NAVIGATION */
 .topnav {
   display: flex;
   align-items: center;
@@ -185,7 +187,7 @@ body {
   color: white;
 }
 
-/* SEARCH */
+/* SEARCH BAR */
 .search-wrap {
   margin-left: auto;
 }
@@ -204,30 +206,6 @@ body {
   outline: none;
   font-weight: 500;
   width: 200px;
-}
-
-@media (max-width: 1024px) {
-  #home {
-    padding: 100px 60px 30px 60px;
-  }
-  .archive {
-    font-size: 3.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #home {
-    padding: 90px 30px 20px 30px;
-  }
-  .welcome {
-    font-size: 1.4rem;
-  }
-  .archive {
-    font-size: 2.6rem;
-  }
-  .subtitle {
-    font-size: 1rem;
-  }
 }
 
 /* ABOUT SECTION */
@@ -254,7 +232,7 @@ body {
 .about-subtitle {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1E73BE; 
+  color: #1E73BE;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -266,6 +244,7 @@ body {
   color: #222;
 }
 
+/* CLUBS GRID */
 .clubs-grid {
   display: flex;
   flex-wrap: wrap;
@@ -303,29 +282,7 @@ body {
   box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
 }
 
-.hero-title {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 10px;
-  color: var(--blue3);
-}
-
-.adviser {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #444;
-}
-
-.lead {
-  font-size: 1.1rem;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto 30px;
-  color: #222;
-  line-height: 1.8;
-}
-
+/* SECTIONS */
 .section {
   display: none;
   opacity: 0;
@@ -343,6 +300,7 @@ body {
   transform: translateY(0);
 }
 
+/* CLUB PAGE */
 .club-page-logo {
   position: absolute;
   top: 25px;
@@ -360,6 +318,7 @@ body {
   box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
 }
 
+/* BUTTON */
 .back-btn {
   margin-top: 40px;
   background-color: var(--blue2);
@@ -378,6 +337,7 @@ body {
   transform: scale(1.05);
 }
 
+/* GMAIL ICON */
 .gmail-tooltip {
   position: fixed;
   bottom: 25px;
@@ -402,47 +362,30 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 900px) {
-  .lead {
-    max-width: 90%;
-    font-size: 1rem;
-  }
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  .club-page-logo {
-    position: static;
-    display: block;
-    margin: 0 auto 20px;
-  }
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  color: #222;
-}
-
+/* FAQ SECTION */
 .faq-page {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 40px 10%;
 }
 
-h1 {
-  color: #2b78e4;
+.faq-section h1 {
+  color: var(--blue3);
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.search {
+.faq-section .search {
   width: 100%;
   max-width: 400px;
   padding: 8px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 25px;
   font-size: 0.95rem;
 }
 
@@ -452,7 +395,7 @@ h1 {
 }
 
 .faq-item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 
 .question {
@@ -463,12 +406,15 @@ h1 {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  font-weight: 600;
+  color: #333;
 }
 
 .answer {
   display: none;
-  padding: 0 0 10px 0;
+  padding: 0 0 10px;
   font-size: 0.95rem;
+  color: #444;
 }
 
 .answer.open {
@@ -481,12 +427,25 @@ h1 {
 }
 
 .contact .hint {
-  color: #2b78e4;
+  color: var(--blue2);
 }
 
 .email {
-  display: flex;
-  align-items: center;
-  gap: 5px;
   margin-top: 5px;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #home { padding: 100px 60px 30px; }
+  .archive { font-size: 3.2rem; }
+  .faq-page { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  #home { padding: 90px 30px 20px; }
+  .welcome { font-size: 1.4rem; }
+  .archive { font-size: 2.6rem; }
+  .subtitle { font-size: 1rem; }
+  .faq-section h1 { font-size: 1.5rem; }
 }
