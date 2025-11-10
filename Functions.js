@@ -58,25 +58,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     nextBtn.addEventListener("click", () => {
-      index = (index + 1) % cards.length; // loops forward
+      index = (index + 1) % cards.length;
       moveCarousel();
     });
 
     prevBtn.addEventListener("click", () => {
-      index = (index - 1 + cards.length) % cards.length; // loops backward
+      index = (index - 1 + cards.length) % cards.length;
       moveCarousel();
     });
 
     window.addEventListener("resize", moveCarousel);
 
-    // Optional auto-slide
     setInterval(() => {
       index = (index + 1) % cards.length;
       moveCarousel();
     }, 5000);
   }
 
+  const questions = document.querySelectorAll('.question');
+
+questions.forEach(q => {
+  q.addEventListener('click', () => {
+    q.classList.toggle('active');
+    const answer = q.nextElementSibling;
+    answer.classList.toggle('open');
+  });
+});
+
   // --- INITIAL LOAD ---
   showSection("home");
 });
+
 
