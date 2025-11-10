@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --blue1: #77b9f0;
+  --blue2: #2c8fe0;
+  --blue3: #0d6fbf;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: white;
+  overflow-x: hidden;
+  min-width: 900px;
+  color: #222;
+}
+
+/* PAGE WRAPPER */
+.page {
+  position: relative;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 80px 40px 20px;
+  background: white;
+}
+
+.home-container {
+  text-align: left;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.welcome {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--blue2);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.archive {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--blue3);
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--blue2);
+}
+
+/* CAROUSEL */
+#home .carousel-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  text-align: center;
+}
+
+#home .carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+
+#home .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#home .club-card {
+  min-width: 100%;
+  padding: 25px;
+  background: #f8f9fa;
+}
+
+#home .club-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+#home .club-card h4 {
+  color: #000;
+  margin: 8px 0;
+}
+
+#home .club-card p {
+  color: #555;
+}
+
+#home .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--blue2);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home .carousel-btn:hover {
+  background: var(--blue3);
+}
+
+#home .prev { left: 10px; }
+#home .next { right: 10px; }
+
+@media (min-width: 768px) {
+  #home .club-card { min-width: 50%; }
+}
+
+@media (min-width: 1024px) {
+  #home .club-card { min-width: 33.33%; }
+}
+
+/* NAVIGATION */
+.topnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--blue3);
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1220;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu button.active,
+.menu button:hover {
+  background: var(--blue2);
+  color: white;
+}
+
+/* SEARCH BAR */
+.search-wrap {
+  margin-left: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 180px;
+}
+
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 8%;
+}
+
+.about-left, .about-right {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.about-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 0.4rem;
+}
+
+.about-subtitle {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1E73BE;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.about-left p, .about-right p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #222;
+}
+
+/* CLUBS GRID */
+.clubs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+.club {
+  width: 160px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.club .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--blue1);
+  margin: 0 auto 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 60px 0 80px;
+  text-align: center;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* BUTTON */
+.back-btn {
+  margin-top: 25px;
+  background-color: var(--blue2);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--blue3);
+  transform: scale(1.05);
+}
+
+/* GMAIL ICON */
+.gmail-tooltip {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gmail-tooltip img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--blue2);
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gmail-tooltip:hover img {
+  transform: scale(1.1);
+}
+
+/* FAQ SECTION */
+.faq-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 40px 8%;
+}
+
+.faq-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.faq-section .search {
+  max-width: 350px;
+  padding: 6px;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.question {
+  padding: 8px 0;
+}
+
+.answer {
+  padding: 0 0 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #home { padding: 60px 40px 20px; }
+  .archive { font-size: 3rem; }
+  .faq-page { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  #home { padding: 50px 25px 15px; }
+  .welcome { font-size: 1.3rem; }
+  .archive { font-size: 2.4rem; }
+  .subtitle { font-size: 0.95rem; }
+}
