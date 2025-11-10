@@ -5,24 +5,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
 
+  const track = document.querySelector(".carousel-track");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const cards = document.querySelectorAll(".club-card");
+
+  let carouselIndex = 0;
+  let carouselInterval = null;
+
+  function moveCarousel() {
+    const cardWidth = cards[0]?.offsetWidth || 0;
+    track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+  }
+
+  function startCarousel() {
+    if (!track || !cards.length) return;
+    stopCarousel();
+    carouselInterval = setInterval(() => {
+      carouselIndex = (carouselIndex + 1) % cards.length;
+      moveCarousel();
+    }, 5000);
+  }
+
+  function stopCarousel() {
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+      carouselInterval = null;
+    }
+  }
+
   function showSection(id) {
     sections.forEach(section => {
       section.classList.toggle("active", section.id === id);
     });
+
     buttons.forEach(btn =>
       btn.classList.toggle("active", btn.dataset.page === id)
     );
+
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // enable carousel only on home
+    if (id === "home") startCarousel();
+    else stopCarousel();
   }
 
+  // navigation buttons
   buttons.forEach(btn =>
     btn.addEventListener("click", () => showSection(btn.dataset.page))
   );
 
+  // club tiles
   clubs.forEach(club =>
     club.addEventListener("click", () => showSection(club.dataset.page))
   );
 
+  // search
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -36,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // back buttons
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
@@ -43,50 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- CLUB CAROUSEL FUNCTIONALITY ---
-  const track = document.querySelector(".carousel-track");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-
+  // carousel controls (only respond on home)
   if (track && prevBtn && nextBtn) {
-    const cards = document.querySelectorAll(".club-card");
-    let index = 0;
-
-    function moveCarousel() {
-      const cardWidth = cards[0]?.offsetWidth || 0;
-      track.style.transform = `translateX(-${index * cardWidth}px)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % cards.length;
+    prevBtn.addEventListener("click", () => {
+      if (!document.getElementById("home").classList.contains("active")) return;
+      carouselIndex = (carouselIndex - 1 + cards.length) % cards.length;
       moveCarousel();
     });
 
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + cards.length) % cards.length;
+    nextBtn.addEventListener("click", () => {
+      if (!document.getElementById("home").classList.contains("active")) return;
+      carouselIndex = (carouselIndex + 1) % cards.length;
       moveCarousel();
     });
 
     window.addEventListener("resize", moveCarousel);
-
-    setInterval(() => {
-      index = (index + 1) % cards.length;
-      moveCarousel();
-    }, 5000);
   }
 
-  const questions = document.querySelectorAll('.question');
-
-questions.forEach(q => {
-  q.addEventListener('click', () => {
-    q.classList.toggle('active');
-    const answer = q.nextElementSibling;
-    answer.classList.toggle('open');
+  // FAQ toggle
+  document.querySelectorAll(".question").forEach(q => {
+    q.addEventListener("click", () => {
+      q.classList.toggle("active");
+      q.nextElementSibling.classList.toggle("open");
+    });
   });
-});
 
-  // --- INITIAL LOAD ---
+  // initial view
   showSection("home");
 });
-
-
