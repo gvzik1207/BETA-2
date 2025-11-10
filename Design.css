@@ -254,7 +254,7 @@ body {
 .about-subtitle {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1E73BE; /* same blue tone as the image */
+  color: #1E73BE; 
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -415,4 +415,78 @@ body {
     display: block;
     margin: 0 auto 20px;
   }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  color: #222;
+}
+
+.faq-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+h1 {
+  color: #2b78e4;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.search {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.faq {
+  width: 100%;
+  max-width: 600px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  padding: 0 0 10px 0;
+  font-size: 0.95rem;
+}
+
+.answer.open {
+  display: block;
+}
+
+.contact {
+  max-width: 250px;
+  font-size: 0.95rem;
+}
+
+.contact .hint {
+  color: #2b78e4;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
 }
