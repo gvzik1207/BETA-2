@@ -44,23 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     window.scrollTo({ top: 0, behavior: "smooth" });
-
-    // enable carousel only on home
+    
     if (id === "home") startCarousel();
     else stopCarousel();
   }
 
-  // navigation buttons
+  // NAVIGATION
   buttons.forEach(btn =>
     btn.addEventListener("click", () => showSection(btn.dataset.page))
   );
 
-  // club tiles
+  // CLUBS
   clubs.forEach(club =>
     club.addEventListener("click", () => showSection(club.dataset.page))
   );
 
-  // search
+  // SEARCH
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // back buttons
+  // BACK BUTTONS 
   document.body.addEventListener("click", e => {
     if (e.target.classList.contains("back-btn")) {
       e.preventDefault();
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // carousel controls (only respond on home)
   if (track && prevBtn && nextBtn) {
     prevBtn.addEventListener("click", () => {
       if (!document.getElementById("home").classList.contains("active")) return;
@@ -98,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", moveCarousel);
   }
-
-  // FAQ toggle
+  
+  // FAQS
   document.querySelectorAll(".question").forEach(q => {
     q.addEventListener("click", () => {
       q.classList.toggle("active");
@@ -107,6 +105,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // initial view
+   // GMAIL
+  const gmailIcon = document.querySelector('.gmail-tooltip img');
+  if (gmailIcon) {
+    gmailIcon.addEventListener('click', () => {
+      const email = 'example@gmail.com'; // Replace with your email
+      window.location.href = `mailto:${email}`;
+    });
+  }
+
+  // INITIAL VIEW
   showSection("home");
 });
+
