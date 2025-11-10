@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let carouselInterval = null;
 
   function moveCarousel() {
+    if (!document.getElementById("home").classList.contains("active")) return;
     const cardWidth = cards[0]?.offsetWidth || 0;
     track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
   }
@@ -45,8 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.scrollTo({ top: 0, behavior: "smooth" });
     
-    if (id === "home") startCarousel();
-    else stopCarousel();
+    // CAROUSEL
+    if (id === "home") {
+      startCarousel();
+      if (track) track.parentElement.style.display = "flex";
+    } else {
+      stopCarousel();
+      if (track) track.parentElement.style.display = "none";
+    }
   }
 
   // NAVIGATION
@@ -81,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // CAROUSEL CONTROLS
   if (track && prevBtn && nextBtn) {
     prevBtn.addEventListener("click", () => {
       if (!document.getElementById("home").classList.contains("active")) return;
@@ -94,7 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
       moveCarousel();
     });
 
-    window.addEventListener("resize", moveCarousel);
+    window.addEventListener("resize", () => {
+      if (document.getElementById("home").classList.contains("active")) {
+        moveCarousel();
+      }
+    });
   }
   
   // FAQS
@@ -105,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-   // GMAIL
+  // GMAIL
   const gmailIcon = document.querySelector('.gmail-tooltip img');
   if (gmailIcon) {
     gmailIcon.addEventListener('click', () => {
@@ -117,4 +129,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // INITIAL VIEW
   showSection("home");
 });
-
