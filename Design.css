@@ -11,25 +11,26 @@ body {
   margin: 0;
   background: white;
   overflow-x: hidden;
-  min-width: 320px; 
+  min-width: 900px;
   color: #222;
 }
 
+/* PAGE WRAPPER */
 .page {
   position: relative;
-  padding: 0 20px;
+  padding: 0 80px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* HOME PAGE */
+/* HOME SECTION */
 #home {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 80px 20px 40px;
+  padding: 120px 80px 40px;
   background: white;
 }
 
@@ -40,7 +41,7 @@ body {
 }
 
 .welcome {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--blue2);
   letter-spacing: 1px;
@@ -48,7 +49,7 @@ body {
 }
 
 .archive {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
   color: var(--blue3);
   line-height: 1.05;
@@ -56,7 +57,7 @@ body {
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--blue2);
 }
@@ -64,8 +65,8 @@ body {
 /* CAROUSEL */
 #home .carousel-container {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 0;
   text-align: center;
 }
 
@@ -85,27 +86,25 @@ body {
 
 #home .club-card {
   min-width: 100%;
-  padding: 20px;
+  padding: 40px;
   background: #f8f9fa;
 }
 
 #home .club-card img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 #home .club-card h4 {
   color: #000;
-  margin: 8px 0;
-  font-size: 1rem;
+  margin: 10px 0;
 }
 
 #home .club-card p {
   color: #555;
-  font-size: 0.9rem;
 }
 
 #home .carousel-btn {
@@ -115,8 +114,8 @@ body {
   background: var(--blue2);
   border: none;
   color: white;
-  font-size: 1.2rem;
-  padding: 8px 12px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
@@ -126,8 +125,8 @@ body {
   background: var(--blue3);
 }
 
-#home .prev { left: 10px; }
-#home .next { right: 10px; }
+#home .prev { left: 15px; }
+#home .next { right: 15px; }
 
 @media (min-width: 768px) {
   #home .club-card { min-width: 50%; }
@@ -137,13 +136,15 @@ body {
   #home .club-card { min-width: 33.33%; }
 }
 
+
+
 /* NAVIGATION */
 .topnav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 15px 20px;
+  gap: 20px;
+  padding: 20px 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -153,15 +154,21 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.logo img { width: 40px; height: 40px; }
+.logo img {
+  width: 50px;
+  height: 50px;
+}
 
-.brand { font-weight: 700; font-size: 1rem; color: var(--blue3); }
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue3);
+}
 
 .menu {
   display: flex;
-  gap: 10px;
-  margin-left: 10px;
-  flex-wrap: wrap;
+  gap: 15px;
+  margin-left: 30px;
 }
 
 .menu button {
@@ -170,55 +177,274 @@ body {
   font-weight: 600;
   cursor: pointer;
   color: #0b1220;
-  font-size: 0.85rem;
-  padding: 5px 8px;
+  font-size: 0.95rem;
+  padding: 5px 10px;
   border-radius: 6px;
   transition: 0.3s;
 }
 
 .menu button.active,
-.menu button:hover { background: var(--blue2); color: white; }
+.menu button:hover {
+  background: var(--blue2);
+  color: white;
+}
 
-.search-wrap { margin-left: auto; }
+/* SEARCH BAR */
+.search-wrap {
+  margin-left: auto;
+}
 
 .search {
   display: flex;
   align-items: center;
   background: white;
   border-radius: 8px;
-  padding: 5px 10px;
+  padding: 6px 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.search input { border: none; outline: none; font-weight: 500; width: 150px; }
+.search input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 200px;
+}
 
-/* ABOUT US */
-.about-container { padding: 30px 5%; gap: 30px; flex-direction: column; }
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px 10%;
+}
 
-.about-left, .about-right { flex: 1; min-width: 100%; }
+.about-left, .about-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
 
-.about-title { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.about-subtitle { font-size: 2rem; margin-bottom: 1rem; }
-.about-left p, .about-right p { font-size: 0.95rem; line-height: 1.7; text-align: justify; }
+.about-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1E73BE;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.about-left p, .about-right p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #222;
+}
 
 /* CLUBS GRID */
-.clubs-grid { gap: 16px; justify-content: center; margin-bottom: 80px; }
+.clubs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  justify-content: center;
+}
 
-.club { width: 140px; }
-.club .avatar { width: 100px; height: 100px; margin-bottom: 8px; }
+.club {
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.club .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--blue1);
+  margin: 0 auto 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.club .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.club .avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
+}
 
 /* SECTIONS */
-.section { padding: 60px 0; }
+.section {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 80px 0 120px;
+  text-align: center;
+}
 
-/* BUTTONS */
-.back-btn { padding: 10px 18px; font-size: 0.95rem; }
+.section.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-/* GMAIL */
-.gmail-tooltip img { width: 50px; height: 50px; }
+/* CLUB PAGE */
+.club-page-logo {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
 
-/* FAQS */
-.faq-page { flex-direction: column; padding: 40px 5%; gap: 40px; }
-.faq-section h1 { font-size: 1.5rem; }
+.section.active .club-page-logo {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
+}
+
+/* BUTTON */
+.back-btn {
+  margin-top: 40px;
+  background-color: var(--blue2);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--blue3);
+  transform: scale(1.05);
+}
+
+/* GMAIL ICON */
+.gmail-tooltip {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gmail-tooltip img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--blue2);
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gmail-tooltip:hover img {
+  transform: scale(1.1);
+}
+
+/* FAQ SECTION */
+.faq-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 60px 10%;
+}
+
+.faq-section {
+  flex: 2;
+}
+
+.faq-section h1 {
+  color: var(--blue3);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.faq-section .search {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.faq {
+  width: 100%;
+  max-width: 700px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.answer {
+  display: none;
+  padding: 0 0 10px;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
+
+.answer.open {
+  display: block;
+}
+
+.contact {
+  flex: 1;
+  max-width: 250px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.contact .hint {
+  color: var(--blue2);
+}
+
+.email {
+  margin-top: 5px;
+  color: #000;
+}
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -234,3 +460,6 @@ body {
   .subtitle { font-size: 1rem; }
   .faq-section h1 { font-size: 1.5rem; }
 }
+
+
+
